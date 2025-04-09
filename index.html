@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 
 <html lang="ja">
-
     <head>
         <meta charset="UTF-8" />
         <meta name="description" content="デジタル時計を表示します。" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://desimaru.github.io/clock/" />
         <title>デジタル時計</title>
         <style>
             body {
@@ -17,9 +17,18 @@
                 color: black;
                 background-color: white;
             }
-            
-            label, input {
+
+            label,
+            input {
                 cursor: pointer;
+            }
+            #source {
+                position: fixed;
+                bottom: 1px;
+                right: 1px;
+            }
+            a {
+                text-decoration: none;
             }
         </style>
     </head>
@@ -28,7 +37,7 @@
         <div>
             <label><input type="radio" name="time" />世界標準時</label>
             <br />
-            <label><input type="radio" name="time" />現地時刻</label>
+            <label><input type="radio" name="time" checked="true" />現地時刻</label>
         </div>
         <h1></h1>
         <div>
@@ -36,18 +45,20 @@
             <br />
             <label><input type="checkbox" />ミリ秒</label>
             <br />
-            <label><input type="checkbox">24時間表記</label>
+            <label><input type="checkbox" />24時間表記</label>
         </div>
         <div>
-            <label><input type="color" />文字色</label>
+            <label><input type="color" value="#000000" />文字色</label>
             <br />
-            <label><input type="color" />背景色</label>
+            <label><input type="color" value="#FFFFFF" />背景色</label>
         </div>
         <div>
-            <label><input type="number" />文字サイズ</label>
+            <label><input type="number" value="80" />文字サイズ</label>
             <br />
+        </div>
+        <div id="source">
+            <a href="https://github.com/desimaru/clock" target="_blank">ソースコード</a>
         </div>
         <script src="./index.js"></script>
     </body>
-
 </html>
