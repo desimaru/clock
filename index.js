@@ -1,3 +1,4 @@
+"use strict";
 const body = document.body,
     h1 = document.querySelector("h1"),
     [, isLocalTime, isShowYear, isShowMS, is24hour, color, backgroundColor, fontSize] =

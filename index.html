@@ -3,12 +3,13 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8" />
-        <meta name="description" content="デジタル時計を表示します。" />
+        <meta name="description" content="ミリ秒、24時間表記などを切り替えられるデジタル時計を表示するページです。サーバーは利用せずJavaScriptのDate APIを使用しています。" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href="https://desimaru.github.io/clock/" />
         <title>デジタル時計</title>
         <style>
             body {
+                white-space: nowrap;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -16,6 +17,7 @@
                 user-select: none;
                 color: black;
                 background-color: white;
+                overflow: hidden;
             }
 
             label,
@@ -23,7 +25,7 @@
                 cursor: pointer;
             }
             #source {
-                position: fixed;
+                position: absolute;
                 bottom: 1px;
                 right: 1px;
             }
@@ -31,10 +33,10 @@
                 text-decoration: none;
             }
         </style>
+        <meta name="google-site-verification" content="RYURiqwy0Ey3u-4fYQ1c4PXA92O3d0fV_7N21khCv9A" />
     </head>
 
-    <body>
-        <div>
+    <body><div>
             <label><input type="radio" name="time" />世界標準時</label>
             <br />
             <label><input type="radio" name="time" checked="true" />現地時刻</label>
